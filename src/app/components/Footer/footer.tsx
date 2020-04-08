@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-export const footerText = `Copyright &copy; www.reactproject.com`;
+export const footerText = 'Copyright &copy; www.reactproject.com';
 
 export const Footer = () => {
   return (

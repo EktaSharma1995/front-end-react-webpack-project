@@ -1,20 +1,20 @@
 /* eslint-disable no-undef */
-import Login from "./login";
-import React from "react";
-import { configure, shallow, mount } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import Login from './login';
+import React from 'react';
+import { configure, shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
 // const credentials = { email: 'esharma1995@gmail.com', password: '123' };
 const loginInfo = shallow(<Login />);
-const emailInput = loginInfo.find("email");
+const emailInput = loginInfo.find('email');
 // const passwordInput = loginInfo.find('password');
 // const email = 'Email: esharma1995@gmail.com';
 
 // const mockFunction = jest.fn();
 
-it("input field email is required", () => {
+it('input field email is required', () => {
   emailInput.length == 1;
 });
 

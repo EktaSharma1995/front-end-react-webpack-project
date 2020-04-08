@@ -1,5 +1,4 @@
-const express = require('express');
-const app = express();
+import app from 'express';
 const portNumber = 3000;
 const sourceDir = 'dist';
 

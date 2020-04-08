@@ -24,11 +24,11 @@
   "scripts": {
     "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
-    "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
     "start-prod": "npm run build && node express.js",
-    "test": "jest --coverage --watchAll --config=configs/jest.json"
+    "test": "jest --coverage --watchAll"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -42,6 +42,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-router-dom": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
@@ -58,7 +59,7 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.5",
+    "typescript": "^3.8.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
@@ -67,14 +68,19 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "config": "^3.2.5",
     "cors": "^2.8.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
     "formik": "^2.1.4",
     "history": "^4.10.1",
     "http-proxy-middleware": "^0.21.0",
+    "jest-enzyme": "^7.1.2",
     "jwt-decode": "^2.2.0",
     "postcss-loader": "^3.0.0",
     "prettier-eslint": "^9.0.1",
