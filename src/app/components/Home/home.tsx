@@ -1,11 +1,16 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import axios from 'axios';
 export const txtMessage = 'Welcome';
 
-export const Home = () => {
+export const Home = props => {
   const [name, setName] = useState('');
+
+  const logout = () => {
+    sessionStorage.clear();
+    props.history.push('/');
+  };
 
   useEffect(() => {
     const token = JSON.parse(sessionStorage.getItem('token'));
@@ -29,6 +34,8 @@ export const Home = () => {
         value={name}
         onChange={e => setName(e.target.value)}
       ></input>
+      <br />
+      <Button onClick={logout}>Logout</Button>
     </Container>
   );
 };
