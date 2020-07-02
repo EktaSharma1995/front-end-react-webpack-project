@@ -1,0 +1,6 @@
+{
+  "editor.suggest.statusBar.visible": true,
+  "tslint.suppressWhileTypeErrorsPresent": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "eslint.validate": []
+}

@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 import Login from './login';
-import React from 'react';
-import { configure, shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import React from './node_modules/react';
+import { configure, shallow, mount } from './node_modules/enzyme';
+import Adapter from './node_modules/enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 

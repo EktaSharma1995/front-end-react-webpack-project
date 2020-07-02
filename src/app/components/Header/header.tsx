@@ -1,8 +1,8 @@
-import * as React from "react";
-import * as ReactBootStrap from "react-bootstrap";
+import * as React from 'react';
+import * as ReactBootStrap from 'react-bootstrap';
 
 export const Header = () => {
-  const name = "Ekta Sharma";
+  const name = 'Ekta Sharma';
   return (
     <ReactBootStrap.Container fluid>
       <ReactBootStrap.Navbar className="custom" expand="lg">

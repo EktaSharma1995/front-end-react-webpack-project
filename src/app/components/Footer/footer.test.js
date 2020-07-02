@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-import React from 'react';
+import React from './node_modules/react';
 import Footer, { footerText } from './footer';
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { configure, shallow } from './node_modules/enzyme';
+import Adapter from './node_modules/enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 

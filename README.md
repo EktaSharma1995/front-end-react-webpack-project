@@ -63,3 +63,7 @@
 
 - [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
 - [Isomorphic Webapp Starter](https://github.com/vikpe/isomorphic-webapp-starter)
+
+### iterate an object
+
+`{Object.entries(cart).map(([key, value]) => { return (<p> {key} <br />{value}</p>);})}`
