@@ -42,6 +42,7 @@ export const Home = (props) => {
       })
       .catch((error) => {
         console.log(error);
+        console.log("test");
         setName("");
       });
   }, []);
